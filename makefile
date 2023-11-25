@@ -22,6 +22,12 @@ interbash:
 login:
 	docker login -u "surajkunthu"
 
+
+## CHANGE TAG for local docker repo to match dockerhub repo:
+.PHONY: changeTag
+changeTag:
+	docker tag knn_iris:latest surajkunthu/ds5111_docker_sk9km:latest
+
 # now push your image to dockerhub
 .PHONY: push
 push:
